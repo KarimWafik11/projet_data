@@ -29,7 +29,10 @@ Ce fichier permet de faire le lien avec les stations du premier jeu de données 
 But du projet : Prédire le nombre de validation aux heures de pointes pour tous les rer.
 
 Etape 1 : Nettoyage des données et couplage des données entre les 2 sets (test d'abord sur une annnée)
-Etape 2 : Choix du modèle de regression à implementer
+Etape 2 : Choix du modèle de regression ou série temporelle à implementer
 Etape 3 : Alimenter le modèle avec toutes les données
 
-
+Installer le projet:
+  - Installer miniconda
+  - Ajouter les paths aux variables d'environmment
+  - Installer toutes les biblitheque du code (pandas, holidays, scikit, catboost, sarimax ....)
