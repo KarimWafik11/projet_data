@@ -9,7 +9,7 @@ from model_serie_temporelle.sarimax_model_all import sarimax_prediction_all
 
 start = time.time()
 
-#generate_data()    #permet de (re)générer le fichier df_concatenat.csv contenant toutes les données
+#generate_data()    #permet de (re)généré le fichier df_concatenat.csv contenant toutes les données
 #df = pd.read_csv('final_data/df_all_data.csv')
 #dff = df[(df['LIBELLE_ARRET'] == 'JAVEL') & (df['JOUR'].str.contains('-12-31'))]
 #print(dff)    #affiche le nombre de validation pour l'arrêt JAVEL le 1er janvier

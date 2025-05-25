@@ -283,7 +283,7 @@ def get_top_errors(df_merged, top_n=10):
     df_merged = df_merged.dropna(subset=['y', 'yhat']).copy()
     df_merged['abs_error'] = np.abs(df_merged['y'] - df_merged['yhat'])
     top_errors = df_merged.sort_values('abs_error', ascending=False).head(top_n)
-    #print(f"\nTop {top_n} erreurs de prédiction :")
+    #print(f"\nTop {top_n} erreurs de prédict:")
     #print(top_errors[['ds', 'y', 'yhat', 'abs_error']])
     list_date_error = top_errors['ds'].tolist()
     #dates_2020 = liste1 = pd.date_range(start="2020-01-01", end="2020-12-31").to_list()
