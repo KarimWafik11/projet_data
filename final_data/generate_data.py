@@ -13,10 +13,8 @@ def generate_data():
     df = pd.concat([df1_2015, df2_2015])
     for year in years:
         df_per_year1 = pd.read_csv(f'data/data-rf-{year}/{year}_S1_NB_FER.txt', sep='\t', names=col_names, skiprows=1, low_memory=False, encoding='ISO-8859-1')
-        if year == '2022':
-            separator = ';'
-        else:
-            separator = '\t'
+        
+        separator = '\t'
 
         df_per_year2 = pd.read_csv(f'data/data-rf-{year}/{year}_S2_NB_FER.txt', sep=separator, names=col_names, skiprows=1, low_memory=False, encoding='ISO-8859-1')
         df_per_year = pd.concat([df_per_year1, df_per_year2], ignore_index=True)
@@ -65,8 +63,8 @@ def generate_data():
         df_non_jointes = df_merged[df_merged['nom_long'].isna()]
         df = df_non_jointes[['JOUR', 'LIBELLE_ARRET', 'LIBELLE_ARRET_clean', 'NB_VALD']]
 
-    df_final = df_final[['JOUR', 'LIBELLE_ARRET', 'NB_VALD', 'res_com']]
-
+    df_final = df_final[['JOUR', 'LIBELLE_ARRET', 'LIBELLE_ARRET_clean', 'NB_VALD', 'res_com']]
+    
     # Création d'une correspondance pour les noms de stations
     correspondance = {
         'AEROPORT CHARLES DE GAULLE 1': 'Terminal 1',
@@ -117,7 +115,6 @@ def generate_data():
             df.loc[idx, 'res_com'] = correspondance[libelle]['res_com']
 
     df_final = pd.concat([df_final, df], ignore_index=True)
-    df_final = df_final.drop(columns='LIBELLE_ARRET_clean')
 
     # Transformation de la colonne res_com en colonnes binaires
     df_dummies = df_final['res_com'].str.get_dummies(sep=' / ')
@@ -208,5 +205,15 @@ def generate_data():
     df_final['IS_VACANCE'] = df_final['JOUR'].isin(vacance_dates).astype(int)
 
     # Enregistrement du dataframe final
-    df_lignes_stations.to_csv('final_data/df_lignes_ferrees.csv', index=False, encoding='utf-8')
-    df_final.to_csv('final_data/df_all_data.csv', index=False, encoding='utf-8')
+    df_lignes_stations.loc[:, 'LIBELLE_ARRET_clean'] = df_lignes_stations['LIBELLE_ARRET'].apply(
+        lambda x: re.sub(r'\s+', '', re.sub(r'\s*\([^)]*\)', '', str(x)).replace('-', ''))
+    )
+
+    # Pour éviter le doublon de colonne lors du reset_index, change l'agg
+    df_lignes_stations = df_lignes_stations.groupby(['LIBELLE_ARRET_clean', 'ligne_res'], as_index=False).agg({
+        'LIBELLE_ARRET': 'first'
+    })
+    df_lignes_stations['LIBELLE_ARRET'] = df_lignes_stations['LIBELLE_ARRET'].str.strip()
+
+    df_lignes_stations.to_csv('final_data/df_lignes_ferrees.csv', index=False, encoding='ISO-8859-1')
+    df_final.to_csv('final_data/df_all_data.csv', index=False, encoding='ISO-8859-1')
