@@ -1,12 +1,13 @@
 import time, re
 import pandas as pd
-from final_data.generate_data import generate_data
 from model_serie_temporelle.prophet_model_by_arret import prophet_prediction_by_arret
 from model_serie_temporelle.prophet_model_all import prophet_prediction_all
 from model_serie_temporelle.prophet_model import prophet_prediction
 
+print("okkkkk")
 start = time.time()
 
+#from final_data.generate_data import generate_data
 #generate_data()    #permet de (re)généré le fichier df_concatenat.csv contenant toutes les données
 #df = pd.read_csv('final_data/df_all_data.csv')
 #dff = df[(df['LIBELLE_ARRET'] == 'JAVEL') & (df['JOUR'].str.contains('-12-31'))]
