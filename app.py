@@ -3,9 +3,7 @@ import pandas as pd
 from final_data.generate_data import generate_data
 from model_serie_temporelle.prophet_model_by_arret import prophet_prediction_by_arret
 from model_serie_temporelle.prophet_model_all import prophet_prediction_all
-from model_serie_temporelle.prophet_model_cdm import prophet_prediction_cdm
-from model_serie_temporelle.sarimax_model_cdm import sarimax_prediction_cdm
-from model_serie_temporelle.sarimax_model_all import sarimax_prediction_all
+from model_serie_temporelle.prophet_model import prophet_prediction
 
 start = time.time()
 
@@ -55,10 +53,7 @@ print(final_result)
 #result = prophet_prediction_cdm(year, 'LA PLAINE-STADE DE FRANCE')
 #result = prophet_prediction_cdm(year, 'VILLEPARISIS-MITRY-LE-NEUF')
 
-arret_liste = ['JAVEL', 'JUSSIEU']
-#result = sarimax_prediction_all(year, arret_liste)
 
-#result = prophet_prediction_by_arret(year, 'JAVEL')
 
 
 
