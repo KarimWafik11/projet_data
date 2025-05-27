@@ -16,7 +16,7 @@ from sklearn.metrics import mean_absolute_percentage_error
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
-def sarimax_prediction_cdm(year, arret):
+def sarimax_prediction_cdm(arret):
     try:
         df = pd.read_csv('final_data/df_all_data.csv', parse_dates=['JOUR'])
     except Exception as e:
