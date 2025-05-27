@@ -130,7 +130,7 @@ print(f"Nombre total de validations prédites: {final_df['yhat'].sum():,}".repla
 
 # Chargement et analyse des données historiques pour comparaison
 print("\nAnalyse des données historiques pour comparaison:")
-historique_df = pd.read_csv('final_data/df_all_data.csv', parse_dates=['JOUR'])
+historique_df = pd.read_csv('final_data/df_rer_e.csv', parse_dates=['JOUR'])
 
 # Renommer les colonnes pour correspondre à notre format
 historique_df = historique_df.rename(columns={

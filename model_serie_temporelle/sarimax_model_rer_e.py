@@ -20,7 +20,7 @@ import matplotlib.dates as mdates
 def sarimax_model_rer_e(arret, dates_exclues):
 
     try:
-        df = pd.read_csv('final_data/df_all_data.csv', parse_dates=['JOUR'])
+        df = pd.read_csv('final_data/df_rer_e.csv', parse_dates=['JOUR'])
     except Exception as e:
         print(f"Erreur lors du chargement du fichier CSV : {e}")
         return None

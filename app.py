@@ -10,7 +10,7 @@ final_result = {}
 cpt = 1
 rer_e = list(df[df['ligne_res'] == 'RER E']['LIBELLE_ARRET_clean'].unique())
 
-df = pd.read_csv('final_data/df_all_data.csv')
+df = pd.read_csv('final_data/df_rer_e.csv')
 rer_e = list(df['LIBELLE_ARRET'].unique())
 
 station_dates_exclues = {

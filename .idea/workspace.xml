@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e02e2e37-84bf-48a6-a8fd-dc9258b262cd" name="Changes" comment="maj app.py">
-      <change afterPath="$PROJECT_DIR$/app_prediction_2027.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_serie_temporelle/sarimax_model_rer_e_2027.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="e02e2e37-84bf-48a6-a8fd-dc9258b262cd" name="Changes" comment="model pour la prédiction du RER E le 1er trimestre 2027">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_data/df_all_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_prediction_2027.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_prediction_2027.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_data/df_all_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/final_data/df_rer_e.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_data/generate_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_serie_temporelle/sarimax_model_rer_e.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_serie_temporelle/sarimax_model_rer_e.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_serie_temporelle/sarimax_model_rer_e_2027.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_serie_temporelle/sarimax_model_rer_e_2027.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,22 +52,26 @@
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "model__sarimax__summer",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/projet_data/final_data",
+    "git-widget-placeholder": "model__sarimax__rer__e",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/projet_data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.intellij.jupyter.py.connections.configurable.JupyterServersConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\projet_data" />
       <recent name="C:\Users\User\IdeaProjects\projet_data\final_data" />
       <recent name="C:\Users\User\IdeaProjects\projet_data\model_serie_temporelle" />
       <recent name="C:\Users\User\IdeaProjects\projet_data\venv\Scripts" />
-      <recent name="C:\Users\User\IdeaProjects\projet_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\projet_data\final_data" />
@@ -130,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748269305866</updated>
-      <workItem from="1748269307189" duration="32619000" />
+      <workItem from="1748269307189" duration="38669000" />
     </task>
     <task id="LOCAL-00001" summary="ajout du fichier df_all_data.csv">
       <option name="closed" value="true" />
@@ -156,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748270994193</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="model pour la prédiction du RER E le 1er trimestre 2027">
+      <option name="closed" value="true" />
+      <created>1748366627575</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748366627575</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +190,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout du fichier df_all_data.csv" />
     <MESSAGE value="maj app.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="maj app.py" />
+    <MESSAGE value="model pour la prédiction du RER E le 1er trimestre 2027" />
+    <option name="LAST_COMMIT_MESSAGE" value="model pour la prédiction du RER E le 1er trimestre 2027" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
