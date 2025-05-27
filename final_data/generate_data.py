@@ -216,4 +216,4 @@ def generate_data():
     df_lignes_stations['LIBELLE_ARRET'] = df_lignes_stations['LIBELLE_ARRET'].str.strip()
 
     df_lignes_stations.to_csv('final_data/df_lignes_ferrees.csv', index=False, encoding='ISO-8859-1')
-    df_final.to_csv('final_data/df_all_data.csv', index=False, encoding='ISO-8859-1')
+    df_final.to_csv('final_data/df_rer_b.csv', index=False, encoding='ISO-8859-1')

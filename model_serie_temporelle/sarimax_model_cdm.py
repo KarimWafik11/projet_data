@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 
 def sarimax_prediction_cdm(arret):
     try:
-        df = pd.read_csv('final_data/df_all_data.csv', parse_dates=['JOUR'])
+        df = pd.read_csv('final_data/df_rer_b.csv', parse_dates=['JOUR'])
     except Exception as e:
         print(f"Erreur lors du chargement du fichier CSV : {e}")
         return None
